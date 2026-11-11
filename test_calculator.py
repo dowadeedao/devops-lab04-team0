@@ -1,5 +1,5 @@
 import unittest
-from calculator import add, subtract, multiply, divide, power, average
+from calculator import add, subtract, multiply, divide, power, modulo
 
 class TestCalculator(unittest.TestCase):
     def test_add(self):
@@ -18,8 +18,11 @@ class TestCalculator(unittest.TestCase):
 
     def test_power(self):
         self.assertEqual(power(2, 3), 8)
-    def test_average(self):
-        self.assertEqual(average([2, 4, 6]), 4)
+    def modulo(a, b):
+        if b == 0:
+            raise ValueError("ห้ามหารด้วยศูนย์")
+        return a % b
+
 
 if __name__ == "__main__":
     unittest.main()
