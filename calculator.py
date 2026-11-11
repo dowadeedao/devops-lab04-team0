@@ -14,3 +14,7 @@ def divide(a, b):
 
 def power(a, b):
     return a ** b
+def average(numbers):
+    if len(numbers) == 0:
+        raise ValueError("ต้องมีตัวเลขอย่างน้อย 1 ตัว")
+    return sum(numbers) / len(numbers)
